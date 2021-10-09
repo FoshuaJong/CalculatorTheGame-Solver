@@ -38,10 +38,16 @@ def mul(number, multiplication):
 def rem(number):
     text = "remove (<<)"
     temp = str(number)
+
     if len(temp) == 1:
-        return 0, "remove"
+        number = 0
+
     temp = temp[0:-1]
-    number = int(temp)
+
+    try:
+        number = int(temp)
+    except ValueError:
+        number = 0
 
     return number, text
 

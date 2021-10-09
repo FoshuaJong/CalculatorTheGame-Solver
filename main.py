@@ -78,7 +78,7 @@ if __name__ == '__main__':
             print("Number progression: {}".format(values))
         else:
             print("\nHmm, something went wrong. No solution was found after {} attempts.".format(threshold))
-        keep_going = int(input("\nKeep going? [0]No [1]Yes\n"))
+        keep_going = int(input("\nGo Again? [0]No [1]Yes\n"))
 
 
 
