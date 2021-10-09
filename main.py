@@ -12,7 +12,7 @@ if __name__ == '__main__':
         start_value = int(input("Start Value: "))
         number = start_value
 
-        button_choices = [add, sub, mul, div, rem, ins, rep, mypow]
+        button_choices = [add, sub, mul, div, rem, ins, rep, mypow, inv]
         buttons = []
         button_values = []
         selection = -1
@@ -21,24 +21,27 @@ if __name__ == '__main__':
             print("\nCREATE BUTTONS\n"
                   "[1]Add      [2]Subtract    [3]Multiply\n"
                   "[4]Divide   [5]Remove      [6]Insert\n"
-                  "[7]Replace  [8]Power\n"
+                  "[7]Replace  [8]Power       [9]Inverse\n"
                   "[0]Finish")
 
             selection = int(input("Selection: "))
 
-            if selection == 0:
-                break
-            elif selection == 5:
-                value = 0
-            elif selection == 7:
-                old = int(input("Old: "))
-                new = int(input("New: "))
-                value = [old, new]
-            else:
-                value = int(input("Button value: "))
+            try:
+                if selection == 0:
+                    break
+                elif selection == 5 or selection == 9:
+                    value = 0
+                elif selection == 7:
+                    old = int(input("Old: "))
+                    new = int(input("New: "))
+                    value = [old, new]
+                else:
+                    value = int(input("Button value: "))
 
-            buttons.append(button_choices[selection - 1])
-            button_values.append(value)
+                buttons.append(button_choices[selection - 1])
+                button_values.append(value)
+            except IndexError:
+                print("Oops, I didn't catch that, try again")
 
         attempts = 0
         while number != goal:
@@ -64,12 +67,11 @@ if __name__ == '__main__':
 
 
         print("\n\nSolution Found")
+        print("Total number of tries: {}".format(attempts))
         print("Original number: {}".format(start_value))
         for i in range(0,len(solution)):
             print("{}) {}".format(i+1, solution[i]))
         print("Number progression: {}".format(values))
-        print("Total number of tries: {}".format(attempts))
-
         keep_going = int(input("\nKeep going? [0]No [1]Yes\n"))
 
 

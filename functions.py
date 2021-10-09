@@ -74,3 +74,10 @@ def mypow(number, exp):
     number = pow(number, exp)
 
     return number, text
+
+
+def inv(number):
+    text = "invert (+/-)"
+    number = -1 * number
+
+    return number, text
