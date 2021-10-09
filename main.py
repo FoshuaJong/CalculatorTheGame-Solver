@@ -52,6 +52,8 @@ if __name__ == '__main__':
         solution = []
         attempts = 0
         threshold = 100000
+
+        # Try to find a solution
         while number != goal and attempts<threshold:
             attempts += 1
             number = start_value
