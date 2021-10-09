@@ -98,7 +98,7 @@ def rev(number):
         temp = temp[::-1]
         number = int(temp)
     else:
-        temp = temp[:1:-1]
+        temp = temp[:0:-1]
         try:
             number = int(temp) * -1
         except ValueError:
