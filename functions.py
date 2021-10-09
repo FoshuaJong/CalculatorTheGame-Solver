@@ -87,3 +87,18 @@ def inv(number):
     number = -1 * number
 
     return number, text
+
+
+def rev(number):
+    text = "Reverse"
+
+    temp = str(number)
+
+    if number >= 0:
+        temp = temp[::-1]
+        number = int(temp)
+    else:
+        temp = temp[:1:-1]
+        number = int(temp) * -1
+
+    return number, text
