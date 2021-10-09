@@ -1,5 +1,6 @@
 # CalculatorTheGame-Solver
 Solver for the mobile application "Calculator: The Game"
+https://play.google.com/store/apps/details?id=com.sm.calculateme&hl=en_NZ&gl=US
 
 Tested and working up to and including level 100.
 
