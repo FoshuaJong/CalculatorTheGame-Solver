@@ -12,15 +12,16 @@ if __name__ == '__main__':
         start_value = int(input("Start Value: "))
         number = start_value
 
-        button_choices = [add, sub, mul, div, rem, ins]
+        button_choices = [add, sub, mul, div, rem, ins, rep]
         buttons = []
         button_values = []
         selection = -1
 
         while True:
-            print("\nINSERT BUTTONS\n"
+            print("\nCREATE BUTTONS\n"
                   "[1]Add      [2]Subtract    [3]Multiply\n"
                   "[4]Divide   [5]Remove      [6]Insert\n"
+                  "[7]Replace\n"
                   "[0]Finish")
 
             selection = int(input("Selection: "))
@@ -29,6 +30,10 @@ if __name__ == '__main__':
                 break
             elif selection == 5:
                 value = 0
+            elif selection == 7:
+                old = int(input("Old: "))
+                new = int(input("New: "))
+                value = [old, new]
             else:
                 value = int(input("Button value: "))
 
@@ -40,6 +45,7 @@ if __name__ == '__main__':
             attempts += 1
             number = start_value
             solution = []
+            values = []
 
             for i in range(0, moves):
                 action = rand.randint(0,len(buttons)-1)
@@ -51,15 +57,17 @@ if __name__ == '__main__':
                     break
 
                 solution.append(text)
+                values.append(number)
 
             # debugging
             #print(number, solution)
 
 
         print("\n\nSolution Found")
+        print("Original number: {}".format(start_value))
         for i in range(0,len(solution)):
             print("{}) {}".format(i+1, solution[i]))
-
+        print("Number progression: {}".format(values))
         print("Total number of tries: {}".format(attempts))
 
         keep_going = int(input("\nKeep going? [0]No [1]Yes\n"))
