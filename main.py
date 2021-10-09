@@ -46,7 +46,7 @@ if __name__ == '__main__':
 
                 buttons.append(button_choices[selection - 1])
                 button_values.append(value)
-            except IndexError:
+            except IndexError or ValueError:
                 print("Oops, I didn't catch that, try again")
 
         solution = []
