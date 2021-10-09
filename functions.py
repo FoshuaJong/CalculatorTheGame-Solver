@@ -67,3 +67,10 @@ def rep(number, replacements):
     number = int(temp.replace(old, new))
 
     return number, text
+
+
+def mypow(number, exp):
+    text = "raise to power {}".format(exp)
+    number = pow(number, exp)
+
+    return number, text

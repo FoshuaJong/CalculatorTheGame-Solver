@@ -12,7 +12,7 @@ if __name__ == '__main__':
         start_value = int(input("Start Value: "))
         number = start_value
 
-        button_choices = [add, sub, mul, div, rem, ins, rep]
+        button_choices = [add, sub, mul, div, rem, ins, rep, mypow]
         buttons = []
         button_values = []
         selection = -1
@@ -21,7 +21,7 @@ if __name__ == '__main__':
             print("\nCREATE BUTTONS\n"
                   "[1]Add      [2]Subtract    [3]Multiply\n"
                   "[4]Divide   [5]Remove      [6]Insert\n"
-                  "[7]Replace\n"
+                  "[7]Replace  [8]Power\n"
                   "[0]Finish")
 
             selection = int(input("Selection: "))
