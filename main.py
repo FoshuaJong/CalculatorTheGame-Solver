@@ -29,10 +29,10 @@ if __name__ == '__main__':
                   "[10]Reverse [11]Sum\n"
                   "[0]Finish")
 
+            try:
             selection = int(input("Selection: "))
             no_button_value = [5,9,10,11]
 
-            try:
                 if selection == 0:
                     break
                 elif selection in no_button_value:
