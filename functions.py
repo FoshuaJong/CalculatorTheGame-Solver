@@ -105,3 +105,16 @@ def rev(number):
             number = 0
 
     return number, text
+
+def mysum(number):
+    text = "sum"
+    sum = 0
+
+    temp = str(number)
+
+    temp.replace("-","")
+
+    for t in temp:
+        sum += int(t)
+
+    return sum, text

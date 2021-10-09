@@ -15,7 +15,7 @@ if __name__ == '__main__':
         button_choices = [add, sub, mul,
                           div, rem, ins,
                           rep, mypow, inv,
-                          rev]
+                          rev, mysum]
         buttons = []
         button_values = []
         selection = -1
@@ -26,11 +26,11 @@ if __name__ == '__main__':
                   "[1]Add      [2]Subtract    [3]Multiply\n"
                   "[4]Divide   [5]Remove      [6]Insert\n"
                   "[7]Replace  [8]Power       [9]Inverse\n"
-                  "[10]Reverse\n"
+                  "[10]Reverse [11]Sum\n"
                   "[0]Finish")
 
             selection = int(input("Selection: "))
-            no_button_value = [5,9,10]
+            no_button_value = [5,9,10,11]
 
             try:
                 if selection == 0:
@@ -50,9 +50,8 @@ if __name__ == '__main__':
                 print("Oops, I didn't catch that, try again")
 
         solution = []
-        values = [start_value]
         attempts = 0
-        threshold = 10000
+        threshold = 100000
         while number != goal and attempts<threshold:
             attempts += 1
             number = start_value
