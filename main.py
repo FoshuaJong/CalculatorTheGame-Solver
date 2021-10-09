@@ -17,6 +17,7 @@ if __name__ == '__main__':
         button_values = []
         selection = -1
 
+
         while True:
             print("\nCREATE BUTTONS\n"
                   "[1]Add      [2]Subtract    [3]Multiply\n"
@@ -43,8 +44,11 @@ if __name__ == '__main__':
             except IndexError:
                 print("Oops, I didn't catch that, try again")
 
+        solution = []
+        values = [start_value]
         attempts = 0
-        while number != goal:
+        threshold = 10000
+        while number != goal and attempts<threshold:
             attempts += 1
             number = start_value
             solution = []
@@ -65,13 +69,15 @@ if __name__ == '__main__':
             # debugging
             #print(number, solution)
 
-
-        print("\n\nSolution Found")
-        print("Total number of tries: {}".format(attempts))
-        print("Original number: {}".format(start_value))
-        for i in range(0,len(solution)):
-            print("{}) {}".format(i+1, solution[i]))
-        print("Number progression: {}".format(values))
+        if number == goal:
+            print("\n\nSolution Found")
+            print("Total number of tries: {}".format(attempts))
+            print("Original number: {}".format(start_value))
+            for i in range(0,len(solution)):
+                print("{}) {}".format(i+1, solution[i]))
+            print("Number progression: {}".format(values))
+        else:
+            print("\nHmm, something went wrong. No solution was found after {} attempts.".format(threshold))
         keep_going = int(input("\nKeep going? [0]No [1]Yes\n"))
 
 
