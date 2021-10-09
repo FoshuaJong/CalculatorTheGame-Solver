@@ -99,6 +99,9 @@ def rev(number):
         number = int(temp)
     else:
         temp = temp[:1:-1]
-        number = int(temp) * -1
+        try:
+            number = int(temp) * -1
+        except ValueError:
+            number = 0
 
     return number, text

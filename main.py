@@ -30,11 +30,12 @@ if __name__ == '__main__':
                   "[0]Finish")
 
             selection = int(input("Selection: "))
+            no_button_value = [5,9,10]
 
             try:
                 if selection == 0:
                     break
-                elif selection == 5 or selection == 9:
+                elif selection in no_button_value:
                     value = 0
                 elif selection == 7:
                     old = int(input("Old: "))
