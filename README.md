@@ -1,5 +1,5 @@
 # CalculatorTheGame-Solver
-Solver for the mobile application "Calculator: The Game"
+Solver for the mobile application "Calculator: The Game" using brute force.
 https://play.google.com/store/apps/details?id=com.sm.calculateme&hl=en_NZ&gl=US
 
 Tested and working up to and including level 100.
